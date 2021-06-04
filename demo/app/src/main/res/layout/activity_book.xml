@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.example.demo.view.BookPageView
+        android:id="@+id/book_page_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/progress_text_view"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/setting_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="48dp"
+            android:visibility="gone"
+            android:background="@color/setting_gray_bg_color"
+            >
+            <!--                style="?android:attr/progressBarStyleHorizontal"-->
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/MaterialAlertDialog.MaterialComponents.Title.Icon.CenterStacked"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:visibility="gone"
+                android:max="100"
+                android:layout_below="@+id/settingRecyclerView"
+                android:layout_centerHorizontal="true"
+                />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settingRecyclerView"
+            android:layout_height="50dp"
+            android:layout_width="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </com.example.demo.view.BookPageView>
+</LinearLayout>
